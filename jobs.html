@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore graduate jobs and internships across South Africa with GradLink Hub's searchable listings and easy apply tools.">
+  <meta name="keywords" content="graduate jobs, internships, job search, South Africa, hiring, career opportunities, entry-level jobs">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Jobs — GradLink Hub">
+  <meta property="og:description" content="Search graduate job listings in Johannesburg, Cape Town, Durban and Pretoria with detailed applications and career support.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/jobs.html">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?jobsearch,career">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jobs — GradLink Hub">
+  <meta name="twitter:description" content="Search graduate job listings in Johannesburg, Cape Town, Durban and Pretoria with detailed applications and career support.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?jobsearch,career">
+  <title>Jobs — GradLink Hub</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <img src="images/logo.svg" alt="GradLink Hub logo" class="logo-image" title="GradLink Hub logo">
+      <h2 class="logo-link">GradLink</h2>
+    </div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="skills.html">Skills</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="auth.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+  <button class="back-button" onclick="goBack()">← Back</button>
+</div>
+
+<h1>Job Opportunities</h1>
+<img src="https://images.pexels.com/photos/3183172/pexels-photo-3183172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Team of professionals" class="page-image">
+
+<div class="search-container">
+  <input type="text" id="search" placeholder="Search by job title..." onkeyup="filterJobs()">
+  <input type="text" id="location" placeholder="Search by location..." onkeyup="filterJobs()">
+  <button onclick="filterJobs()">Search</button>
+</div>
+<div id="jobSearchMessage" class="search-message">Enter job title and location to filter results.</div>
+
+<div id="jobs">
+  <div class="job-card" data-title="software engineer" data-location="johannesburg">
+    <div class="job-header">
+      <div>
+        <h3>Software Engineer</h3>
+        <p style="margin: 0.5rem 0; color: #666;">Tech Solutions Africa</p>
+      </div>
+      <span style="background: #e8f5e9; color: var(--accent); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.9rem;">Full-time</span>
+    </div>
+    <div class="job-meta">
+      <span>Location: Johannesburg</span>
+      <span>Salary: R25,000 - R35,000/month</span>
+      <span>Seniority: Senior Level</span>
+    </div>
+    <p>Develop and maintain software applications using modern programming practices. Requires knowledge in programming languages like Java, Python, or JavaScript.</p>
+    <div class="job-actions">
+      <button class="btn-apply" onclick="showJobDetails('software-engineer')">View Details →</button>
+    </div>
+  </div>
+
+  <div class="job-card" data-title="marketing intern" data-location="cape town">
+    <div class="job-header">
+      <div>
+        <h3>Marketing Intern</h3>
+        <p style="margin: 0.5rem 0; color: #666;">Creative Digital Agency</p>
+      </div>
+      <span style="background: #fff3e0; color: #ff9800; padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.9rem;">Internship</span>
+    </div>
+    <div class="job-meta">
+      <span>Location: Cape Town</span>
+      <span>Salary: R8,000 - R12,000/month</span>
+      <span>Seniority: Entry Level</span>
+    </div>
+    <p>Support marketing campaigns, social media management, and market research. Great opportunity for students to gain experience in digital marketing.</p>
+    <div class="job-actions">
+      <button class="btn-apply" onclick="showJobDetails('marketing-intern')">View Details →</button>
+    </div>
+  </div>
+
+  <div class="job-card" data-title="data analyst" data-location="pretoria">
+    <div class="job-header">
+      <div>
+        <h3>Data Analyst</h3>
+        <p style="margin: 0.5rem 0; color: #666;">Insight Analytics Co.</p>
+      </div>
+      <span style="background: #e3f2fd; color: var(--primary); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.9rem;">Full-time</span>
+    </div>
+    <div class="job-meta">
+      <span>Location: Pretoria</span>
+      <span>Salary: R18,000 - R28,000/month</span>
+      <span>Seniority: Intermediate</span>
+    </div>
+    <p>Analyze data to provide insights for strategic business decisions. Skills in Excel, SQL, and data visualization tools preferred. Entry-level position with growth potential.</p>
+    <div class="job-actions">
+      <button class="btn-apply" onclick="showJobDetails('data-analyst')">View Details →</button>
+    </div>
+  </div>
+
+  <div class="job-card" data-title="graphic designer" data-location="durban">
+    <div class="job-header">
+      <div>
+        <h3>Graphic Designer</h3>
+        <p style="margin: 0.5rem 0; color: #666;">Creative Agency</p>
+      </div>
+      <span style="background: #f3e5f5; color: #9c27b0; padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.9rem;">Full-time</span>
+    </div>
+    <div class="job-meta">
+      <span>Location: Durban</span>
+      <span>Salary: R15,000 - R25,000/month</span>
+      <span>Seniority: Intermediate</span>
+    </div>
+    <p>Create visual content for marketing materials. Proficiency in Adobe Creative Suite required. Creative role in a dynamic team.</p>
+    <div class="job-actions">
+      <button class="btn-apply" onclick="showJobDetails('graphic-designer')">View Details →</button>
+    </div>
+  </div>
+
+  <div class="job-card" data-title="project manager" data-location="johannesburg">
+    <div class="job-header">
+      <div>
+        <h3>Project Manager</h3>
+        <p style="margin: 0.5rem 0; color: #666;">Business Solutions Ltd</p>
+      </div>
+      <span style="background: #e0f2f1; color: #009688; padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.9rem;">Full-time</span>
+    </div>
+    <div class="job-meta">
+      <span>Location: Johannesburg</span>
+      <span>Salary: R30,000 - R45,000/month</span>
+      <span>Seniority: Senior Level</span>
+    </div>
+    <p>Oversee project timelines and coordinate teams. Experience in project management methodologies like Agile or Scrum is a plus. Lead strategic initiatives.</p>
+    <div class="job-actions">
+      <button class="btn-apply" onclick="showJobDetails('project-manager')">View Details →</button>
+    </div>
+  </div>
+  <div class="job-card hidden" data-title="quality assurance" data-location="cape town">
+    <div class="job-header">
+      <div>
+        <h3>Quality Assurance Analyst</h3>
+        <p style="margin: 0.5rem 0; color: #666;">Tech Solutions Africa</p>
+      </div>
+      <span style="background: #e8f5e9; color: var(--accent); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.9rem;">Full-time</span>
+    </div>
+    <div class="job-meta">
+      <span>Location: Cape Town</span>
+      <span>Salary: R18,000 - R24,000/month</span>
+      <span>Seniority: Intermediate</span>
+    </div>
+    <p>Test applications, report defects, and work with developers to improve software quality for production releases.</p>
+    <div class="job-actions">
+      <button class="btn-apply" onclick="showJobDetails('quality-assurance')">View Details →</button>
+    </div>
+  </div>
+
+  <div class="job-card hidden" data-title="business analyst" data-location="durban">
+    <div class="job-header">
+      <div>
+        <h3>Business Analyst</h3>
+        <p style="margin: 0.5rem 0; color: #666;">Insight Analytics Co.</p>
+      </div>
+      <span style="background: #f3e5f5; color: #9c27b0; padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.9rem;">Full-time</span>
+    </div>
+    <div class="job-meta">
+      <span>Location: Durban</span>
+      <span>Salary: R22,000 - R32,000/month</span>
+      <span>Seniority: Intermediate</span>
+    </div>
+    <p>Translate business requirements into actionable analytics and support stakeholders with insight-driven decisions.</p>
+    <div class="job-actions">
+      <button class="btn-apply" onclick="showJobDetails('business-analyst')">View Details →</button>
+    </div>
+  </div></div>
+
+<div class="more-jobs-link">
+  <button class="btn btn-secondary" onclick="showMoreJobs()">View More Jobs</button>
+  <button class="btn btn-secondary" onclick="goTo('services.html')">Explore More Opportunities</button>
+</div>
+
+<!-- Job Details Modal -->
+<div id="jobDetailsModal" class="modal-details">
+  <div class="modal-details-content">
+    <button class="modal-details-close" onclick="closeJobDetails()">✕</button>
+    <div id="jobDetailsContent"></div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html> 
+
+

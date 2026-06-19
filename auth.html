@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to GradLink Hub and access your personalized graduate career dashboard, applications, and skill resources.">
+  <meta name="keywords" content="GradLink login, graduate career portal, dashboard access, job applications, skill resources">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Login — GradLink Hub">
+  <meta property="og:description" content="Sign in to GradLink Hub to continue your graduate job search and career development journey.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/auth.html">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?login,career">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Login — GradLink Hub">
+  <meta name="twitter:description" content="Sign in to GradLink Hub to continue your graduate job search and career development journey.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?login,career">
+  <title>Login — GradLink Hub</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <img src="images/logo.svg" alt="GradLink Hub logo" class="logo-image" title="GradLink Hub logo">
+      <h2 class="logo-link">GradLink</h2>
+    </div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="skills.html">Skills</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="auth.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+  <button class="back-button" onclick="goBack()">← Back</button>
+    <h2>Secure Login</h2>
+    <p class="login-subtitle">Access your personalized dashboard and apply for jobs</p>
+    
+    <form class="login-form" onsubmit="event.preventDefault(); login()">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
+      
+      <button class="btn btn-primary btn-full" type="submit">Login</button>
+      <p id="loginEmailMessage" class="form-feedback" style="text-align: center; margin-top: 1rem;"></p>
+    </form>
+    
+    <p class="login-footer">First time here? <a href="index.html">Explore our opportunities</a></p>
+  </div>
+  
+  <section class="why-gradlink" style="margin-top: 2rem;">
+    <div class="container">
+      <h2>Why Join GradLink Hub?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Verified Opportunities</h3>
+          <p>Access 500+ job listings from verified employers across South Africa. Direct connections to real career opportunities.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Skill Development</h3>
+          <p>Enroll in 200+ industry-aligned courses with expert-led content. Build skills that employers actually want.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Career Guidance</h3>
+          <p>Get personalized career guidance, resume reviews, and interview preparation materials from industry professionals.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Mentorship Network</h3>
+          <p>Connect with experienced mentors, attend AI sessions, and build your professional network in your industry.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Easy Application Process</h3>
+          <p>Quick-apply with your CV or detailed manual application. Track your applications on your personalized dashboard.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Career Growth</h3>
+          <p>From first salary negotiation to technical interview prep—we support every step of your career journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
+

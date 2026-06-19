@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skills hub for graduates: learn React, Python, public speaking, data analysis, UI/UX design, and mobile development.">
+  <meta name="keywords" content="skills hub, graduate training, React, Python, data analysis, UI/UX, mobile development, professional development">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Skills — GradLink Hub">
+  <meta property="og:description" content="Access graduate skill-building courses and career-ready learning paths on GradLink Hub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/skills.html">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?skills,training">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Skills — GradLink Hub">
+  <meta name="twitter:description" content="Access graduate skill-building courses and career-ready learning paths on GradLink Hub.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?skills,training">
+  <title>Skills — GradLink Hub</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <img src="images/logo.svg" alt="GradLink Hub logo" class="logo-image" title="GradLink Hub logo">
+      <h2 class="logo-link">GradLink</h2>
+    </div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="skills.html">Skills</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="auth.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+  <button class="back-button" onclick="goBack()">← Back</button>
+</div>
+
+<h1>Skills Hub</h1>
+<img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Skills development" class="page-image">
+
+<div class="material-grid" style="margin-top: 2rem;">
+  <div class="skill-card">
+    <h3>React Development</h3>
+    <p>Master modern web development with React, the most popular JavaScript framework.</p>
+    <div class="skill-highlights">
+      <span class="skill-tag">8 weeks</span>
+      <span class="skill-tag">Intermediate</span>
+      <span class="skill-tag">1000+ enrolled</span>
+    </div>
+    <p style="font-size: 0.95rem; color: #666; margin: 1rem 0;">Build interactive, dynamic user interfaces. High demand skill in the job market with competitive salaries.</p>
+    <button class="btn-explore" onclick="exploreSkill('react')">Explore More →</button>
+  </div>
+
+  <div class="skill-card">
+    <h3>Python Programming</h3>
+    <p>Learn Python for data science, automation, and backend web development.</p>
+    <div class="skill-highlights">
+      <span class="skill-tag">10 weeks</span>
+      <span class="skill-tag">Beginner</span>
+      <span class="skill-tag">2500+ enrolled</span>
+    </div>
+    <p style="font-size: 0.95rem; color: #666; margin: 1rem 0;">Versatile programming language used in AI, data science, and automation. Essential for modern development.</p>
+    <button class="btn-explore" onclick="exploreSkill('python')">Explore More →</button>
+  </div>
+
+  <div class="skill-card">
+    <h3>Public Speaking</h3>
+    <p>Develop confidence and presentation skills for professional success.</p>
+    <div class="skill-highlights">
+      <span class="skill-tag">6 weeks</span>
+      <span class="skill-tag">All Levels</span>
+      <span class="skill-tag">800+ enrolled</span>
+    </div>
+    <p style="font-size: 0.95rem; color: #666; margin: 1rem 0;">Essential skill for leadership, interviews, and career advancement. Boost your confidence and impact.</p>
+    <button class="btn-explore" onclick="exploreSkill('speaking')">Explore More →</button>
+  </div>
+
+  <div class="skill-card">
+    <h3>Data Analysis</h3>
+    <p>Master Excel, SQL, and data visualization for business insights.</p>
+    <div class="skill-highlights">
+      <span class="skill-tag">9 weeks</span>
+      <span class="skill-tag">Intermediate</span>
+      <span class="skill-tag">1500+ enrolled</span>
+    </div>
+    <p style="font-size: 0.95rem; color: #666; margin: 1rem 0;">Transform raw data into actionable insights. Critical skill for modern businesses across all industries.</p>
+    <button class="btn-explore" onclick="exploreSkill('data-analysis')">Explore More →</button>
+  </div>
+
+  <div class="skill-card">
+    <h3>🎨 UI/UX Design</h3>
+    <p>Learn to design beautiful and user-friendly digital interfaces.</p>
+    <div class="skill-highlights">
+      <span class="skill-tag">10 weeks</span>
+      <span class="skill-tag">Intermediate</span>
+      <span class="skill-tag">1200+ enrolled</span>
+    </div>
+    <p style="font-size: 0.95rem; color: #666; margin: 1rem 0;">Create engaging user experiences. High-demand skill with opportunities in tech companies worldwide.</p>
+    <button class="btn-explore" onclick="exploreSkill('ui-ux')">Explore More →</button>
+  </div>
+
+  <div class="skill-card">
+    <h3>Mobile Development</h3>
+    <p>Build native and cross-platform mobile applications.</p>
+    <div class="skill-highlights">
+      <span class="skill-tag">12 weeks</span>
+      <span class="skill-tag">Intermediate</span>
+      <span class="skill-tag">950+ enrolled</span>
+    </div>
+    <p style="font-size: 0.95rem; color: #666; margin: 1rem 0;">Develop for iOS and Android. Growing market with excellent career opportunities and earning potential.</p>
+    <button class="btn-explore" onclick="exploreSkill('mobile')">Explore More →</button>
+  </div>
+</div>
+
+<!-- Skill Details Modal -->
+<div id="skillDetailsModal" class="modal-details">
+  <div class="modal-details-content">
+    <button class="modal-details-close" onclick="closeSkillDetails()">✕</button>
+    <div id="skillDetailsContent"></div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>0
+
+

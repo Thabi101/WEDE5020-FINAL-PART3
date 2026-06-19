@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact GradLink Hub for graduate job support, mentorship, skills training, and employer inquiries in South Africa.">
+  <meta name="keywords" content="contact GradLink Hub, graduate support, mentorship inquiries, skills training, job help, South Africa">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Contact — GradLink Hub">
+  <meta property="og:description" content="Get in touch with GradLink Hub for career support, job listings, and mentorship services.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/contact.html">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?contact,career">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — GradLink Hub">
+  <meta name="twitter:description" content="Get in touch with GradLink Hub for career support, job listings, and mentorship services.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?contact,career">
+  <title>Contact — GradLink Hub</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="contact-page">
+
+  <nav>
+    <div class="nav-brand">
+      <img src="images/logo.svg" alt="GradLink Hub logo" class="logo-image" title="GradLink Hub logo">
+      <h2 class="logo-link">GradLink</h2>
+    </div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="skills.html">Skills</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="auth.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+  <button class="back-button" onclick="goBack()">← Back</button>
+
+  <div class="page-description">
+    <p>Get in touch with us for any inquiries, support, or feedback about GradLink Hub.</p>
+  </div>
+
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you!</p>
+    <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Contact support team" class="page-image">
+  </section>
+
+  <section class="contact-info">
+    <h2>Contact Information</h2>
+    <p><strong>Location:</strong> Johannesburg,Makhutso street, Soweto, South Africa</p>
+    <p><strong>Coordinates:</strong> <a href="https://www.google.com/maps/search/?api=1&query=-26.23425,27.94469" target="_blank" rel="noopener">26°14'03.3"S 27°56'40.9"E</a></p>
+    <p><strong>Phone:</strong> 0752371758</p>
+    <p><strong>Email:</strong> madumothat070@gmail.com</p>
+  </section>
+
+  <section style="margin-top: 2rem;">
+    <h2>Find Us On Map</h2>
+    <div class="location-map" id="contactMap"></div>
+    <p style="text-align: center; color: #666; margin-top: 1rem;">Main office with meeting rooms available for mentorship sessions and career consultations.</p>
+  </section>
+
+  <section style="margin-top: 2rem; padding: 2rem; background: rgba(50, 205, 50, 0.05); border-radius: 1rem;">
+    <h2>Verified Partners & Opportunities</h2>
+    <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 1.5rem;">
+      <div class="service-card-enhanced">
+        <h3>Tech Solutions Africa</h3>
+        <p style="color: #666; margin-bottom: 1rem;">Leading technology company recruiting software engineers and data analysts.</p>
+        <ul class="service-list">
+          <li>Verified Employer</li>
+          <li>50+ Active Listings</li>
+          <li>Competitive Salaries</li>
+          <li>Career Growth Path</li>
+        </ul>
+        <button class="btn-material" onclick="goTo('jobs.html')" style="margin-top: 1rem;">View Opportunities</button>
+      </div>
+
+      <div class="service-card-enhanced">
+        <h3>Creative Digital Agency</h3>
+        <p style="color: #666; margin-bottom: 1rem;">Award-winning digital agency with internship and entry-level positions.</p>
+        <ul class="service-list">
+          <li>Verified Employer</li>
+          <li>25+ Active Listings</li>
+          <li>Mentorship Program</li>
+          <li>Portfolio Building</li>
+        </ul>
+        <button class="btn-material" onclick="goTo('jobs.html')" style="margin-top: 1rem;">View Opportunities</button>
+      </div>
+
+      <div class="service-card-enhanced">
+        <h3>FinBank Corporation</h3>
+        <p style="color: #666; margin-bottom: 1rem;">Financial services leader with diverse career opportunities.</p>
+        <ul class="service-list">
+          <li>Verified Employer</li>
+          <li>30+ Active Listings</li>
+          <li>Professional Development</li>
+          <li>Comprehensive Benefits</li>
+        </ul>
+        <button class="btn-material" onclick="goTo('jobs.html')" style="margin-top: 1rem;">View Opportunities</button>
+      </div>
+
+      <div class="service-card-enhanced">
+        <h3>Insight Analytics Co.</h3>
+        <p style="color: #666; margin-bottom: 1rem;">Data-driven company specializing in business intelligence and analytics.</p>
+        <ul class="service-list">
+          <li>Verified Employer</li>
+          <li>20+ Active Listings</li>
+          <li>Skills Training</li>
+          <li>Innovation Culture</li>
+        </ul>
+        <button class="btn-material" onclick="goTo('jobs.html')" style="margin-top: 1rem;">View Opportunities</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top: 2rem; padding: 2rem; background: #f9f9f9; border-radius: 1rem;">
+    <h2>Send us a Message</h2>
+    <form class="contact-form" style="max-width: 500px; margin: 1.5rem auto;" onsubmit="submitContactForm(event)">
+      <div class="form-group">
+        <label for="contactName">Your Name</label>
+        <input type="text" id="contactName" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Your Email</label>
+        <input type="email" id="contactEmail" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" placeholder="Your message..." rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      <p class="form-help" style="color: #555; margin-top: 0.75rem;">A new email draft will open in your default mail app so you can send your message and receive a copy at your address.</p>
+      <p id="contactFormMessage" class="form-feedback"></p>
+    </form>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

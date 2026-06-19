@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GradLink Hub connects South African graduates with jobs, internships, skills training, and career mentorship.">
+  <meta name="keywords" content="graduate jobs, internships, mentorship, skills development, career support, South Africa, job search">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="GradLink Hub — Graduate Jobs & Skills Platform">
+  <meta property="og:description" content="Find jobs, skills courses, mentorship, and career support for South African graduates.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?graduates,career">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GradLink Hub — Graduate Jobs & Skills Platform">
+  <meta name="twitter:description" content="Find jobs, skills courses, mentorship, and career support for South African graduates.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?graduates,career">
+  <title>GradLink Hub — Graduate Jobs & Skills Platform</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-brand">
+      <img src="images/logo.svg" alt="GradLink Hub logo" class="logo-image" title="GradLink Hub logo">
+      <h2 class="logo-link">GradLink</h2>
+    </div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="skills.html">Skills</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="auth.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+
+  <div class="page-description">
+    <p>GradLink Hub is a platform designed to bridge the gap between education and employment for graduates. Find job opportunities, build essential skills, and connect with mentors to kickstart your career.</p>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bridge the Gap Between Education and Employment</h1>
+      <p>Find jobs, build skills, and connect with mentors to launch your career today.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary" onclick="goTo('jobs.html')">Find Jobs</button>
+        <button class="btn btn-secondary" onclick="goTo('skills.html')">Build Skills</button>
+      </div>
+    </div>
+    <div class="hero-image-container">
+      <div class="slideshow-container">
+        <img id="heroSlide" src="" alt="Graduation and career slideshow" class="hero-image">
+        <div class="slide-controls">
+          <button onclick="prevSlide()">‹</button>
+          <button onclick="nextSlide()">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <h3>500+</h3>
+      <p>Companies</p>
+    </div>
+    <div class="stat-card">
+      <h3>10k+</h3>
+      <p>Success Stories</p>
+    </div>
+    <div class="stat-card">
+      <h3>200+</h3>
+      <p>Courses</p>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <p class="gallery-description">Click a photo to view details about student success stories, career mentorship, and skills development.</p>
+      <div class="gallery-grid">
+        <img src="https://images.pexels.com/photos/13408315/pexels-photo-13408315.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=800" alt="Graduation success" title="Graduation success" loading="lazy" data-detail="Students celebrate graduation and placement success after completing career preparation programs." class="gallery-thumb" onclick="openLightbox(this)">
+        <img src="https://images.pexels.com/photos/3184295/pexels-photo-3184295.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=800" alt="Students learning" title="Students learning" loading="lazy" data-detail="Learners engage with mentors and training materials to build job-ready skills." class="gallery-thumb" onclick="openLightbox(this)">
+        <img src="https://images.pexels.com/photos/3183172/pexels-photo-3183172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=800" alt="Career guidance" title="Career guidance" loading="lazy" data-detail="One-on-one career guidance helps graduates map their next steps and make informed choices." class="gallery-thumb" onclick="openLightbox(this)">
+        <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=800" alt="Mentorship session" title="Mentorship session" loading="lazy" data-detail="Mentorship sessions connect emerging professionals with industry leaders for real-world insight." class="gallery-thumb" onclick="openLightbox(this)">
+      </div>
+    </div>
+  </section>
+
+  <div id="lightboxOverlay" class="lightbox-overlay" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+      <img id="lightboxImage" src="" alt="Expanded gallery image">
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <section class="why-gradlink">
+    <div class="container">
+      <h2>Why Join GradLink Hub?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Goal-Oriented</h3>
+          <p>Connect with verified partners and genuine opportunities tailored to your career aspirations.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Skill Development</h3>
+          <p>Access curated courses, technical interview prep, and study materials to advance your skills.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Direct Opportunities</h3>
+          <p>Apply to jobs with easy CV upload or detailed manual application process.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Mentorship & Community</h3>
+          <p>Join AI sessions, networking events, and connect with industry professionals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Established 2026 GradLink Hub</p>
+    <p>© 2026 GradLink Hub. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <button class="terms-link" onclick="showTermsModal()">Terms of Service</button></p>
+  </footer>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="rejectTerms()" aria-label="Close terms popup">×</button>
+      <h2>Terms of Service</h2>
+      <p>By using GradLink Hub, you agree to our terms and conditions. GradLink Hub is a service for connecting graduates with job listings, internships, career development resources, mentorship opportunities, and employer information. This platform is provided as a resource to support your job search and professional growth.</p>
+      <p>When you use the site, you agree to provide accurate information and to use the platform responsibly. You must not post misleading, abusive, or otherwise harmful content. You also agree to respect the rights of the employers and mentors featured on the platform.</p>
+      <p>GradLink Hub is not responsible for the outcome of individual applications, interviews, or employment offers. Listings are supplied by third parties and while we review them for quality, we cannot guarantee availability, accuracy, or suitability for every user.</p>
+      <p>We collect data such as name, email, and preferences to improve your experience and deliver notifications. Your email may be used to send account messages, application updates, and service announcements. GradLink Hub will not sell your personal information to third parties.</p>
+      <p>If you accept these terms, you can continue using the platform and interacting with job listings, skills content, and contact forms. If you reject the terms, please do not use the service further.</p>
+      <div class="modal-actions">
+        <button class="close-btn" onclick="acceptTerms()">Accept</button>
+        <button class="close-btn reject" onclick="rejectTerms()">Reject</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

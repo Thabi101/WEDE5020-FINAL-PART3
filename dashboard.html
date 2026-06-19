@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your personalized GradLink Hub dashboard for tracking applications, skill progress, mentorship resources, and career development.">
+  <meta name="keywords" content="graduate dashboard, application tracking, skill progress, mentorship resources, career development, South Africa">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Dashboard — GradLink Hub">
+  <meta property="og:description" content="Track your job applications, skill progress, and mentorship resources in the GradLink Hub dashboard.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/dashboard.html">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?dashboard,career">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dashboard — GradLink Hub">
+  <meta name="twitter:description" content="Track your job applications, skill progress, and mentorship resources in the GradLink Hub dashboard.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?dashboard,career">
+  <title>Dashboard — GradLink Hub</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="loadDashboard()">
+
+<nav>
+  <div class="nav-brand">
+    <img src="images/logo.svg" alt="GradLink Hub logo" class="logo-image" title="GradLink Hub logo">
+      <h2 class="logo-link">GradLink</h2>
+    </div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="skills.html">Skills</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="auth.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+  <button class="back-button" onclick="goBack()">← Back</button>
+  <p>GradLink Hub includes job listings, skill-building courses, mentorship connections, and a personalized dashboard. Options provided: search and apply for jobs, enroll in courses, view application status, and contact support.</p>
+</div>
+
+<div class="dashboard-header">
+  <h1>Your Dashboard</h1>
+  <h2 id="welcomeHeading" class="welcome-greeting">Welcome back!</h2>
+</div>
+
+<div class="dashboard-content">
+  <div class="dashboard-grid">
+    <div class="dashboard-card">
+      <h3>Active Applications</h3>
+      <div id="activeApplicationsList">
+        <div class="dashboard-item">
+          <span>Software Engineer - Tech Solutions</span>
+          <span style="font-size: 0.9rem; color: #666;">Under Review</span>
+        </div>
+        <div class="dashboard-item">
+          <span>Data Analyst - Insight Analytics</span>
+          <span style="font-size: 0.9rem; color: #666;">Application Submitted</span>
+        </div>
+      </div>
+      <button class="btn-explore" style="margin-top: 1rem;" onclick="showDashboardDetail('applications')">Browse More Jobs</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>Skill Progress</h3>
+      <div id="skillProgressList">
+        <div class="dashboard-item">
+          <span>React Development</span>
+          <div class="progress-bar" style="flex: 1; margin-left: 1rem;">
+            <div class="progress-fill" style="width: 45%;"></div>
+          </div>
+          <span style="margin-left: 1rem;">45%</span>
+        </div>
+        <div class="dashboard-item">
+          <span>Python Programming</span>
+          <div class="progress-bar" style="flex: 1; margin-left: 1rem;">
+            <div class="progress-fill" style="width: 75%;"></div>
+          </div>
+          <span style="margin-left: 1rem;">75%</span>
+        </div>
+        <div class="dashboard-item">
+          <span>Public Speaking</span>
+          <div class="progress-bar" style="flex: 1; margin-left: 1rem;">
+            <div class="progress-fill" style="width: 30%;"></div>
+          </div>
+          <span style="margin-left: 1rem;">30%</span>
+        </div>
+      </div>
+      <button class="btn-explore" style="margin-top: 1rem;" onclick="showDashboardDetail('skills')">View All Skills</button>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>Profile Views</h3>
+      <p style="font-size: 2.5rem; margin: 1rem 0; color: var(--accent); font-weight: bold;" id="profileViews">23</p>
+      <p style="color: #666; font-size: 0.95rem;">Profile views this month</p>
+      <button class="btn-explore" style="margin-top: 1rem;" onclick="viewProfile()">View Profile</button>
+    </div>
+  </div>
+
+  <div class="materials-section">
+    <h2>Learning Resources</h2>
+    <div class="material-grid">
+      <div class="material-card">
+        <h4>Study Materials</h4>
+        <p>Access comprehensive study guides and materials for your enrolled skills.</p>
+        <button class="btn-material" onclick="openStudyMaterial('study-materials')">View Materials</button>
+      </div>
+
+      <div class="material-card">
+        <h4>Technical Interview Prep</h4>
+        <p>Prepare for technical interviews with guided problems, real-world challenges, and detailed solutions.</p>
+        <button class="btn-material" onclick="openStudyMaterial('technical-interview')">Start Prep</button>
+      </div>
+
+      <div class="material-card">
+        <h4>Resume Workshop</h4>
+        <p>Watch a recommended video guide on building and optimizing your resume.</p>
+        <button class="btn-material" onclick="openStudyMaterial('resume-workshop')">Watch Video</button>
+      </div>
+
+      <div class="material-card">
+        <h4>Career Articles</h4>
+        <p>Read curated articles with references to Google career resources and interview tips.</p>
+        <button class="btn-material" onclick="openStudyMaterial('career-articles')">Read Articles</button>
+      </div>
+
+      <div class="material-card">
+        <h4>AI Sessions</h4>
+        <p>View available AI sessions covering career coaching, interview practice, and mentoring.</p>
+        <button class="btn-material" onclick="openStudyMaterial('ai-sessions')">View Sessions</button>
+      </div>
+
+      <div class="material-card">
+        <h4>Mentorship</h4>
+        <p>Connect with experienced mentors in your field of interest to guide your career growth.</p>
+        <button class="btn-material" onclick="openStudyMaterial('find-mentor')">Find Mentor</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="upcoming" style="background: rgba(50, 205, 50, 0.05); padding: 1.5rem; border-radius: 1rem; margin-top: 2rem;">
+    <h3>🗓️ Upcoming Session</h3>
+    <div style="background: #fff; padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent);">
+      <h4>Career Growth with Industry Leaders</h4>
+      <p style="margin: 0.5rem 0;">Tomorrow, 2:00 PM</p>
+      <p style="color: #666; font-size: 0.95rem; margin: 0.5rem 0;">Join Sipho Ndlovu, Senior Software Engineer, for insights on career progression and industry trends.</p>
+      <button class="btn-primary" style="margin-top: 0.75rem;" onclick="registerSession()">Register Now</button>
+    </div>
+  </div>
+</div>
+
+<div id="dashboardModal" class="dashboard-modal">
+  <div class="dashboard-modal-content">
+    <button class="modal-details-close" onclick="closeDashboardModal()">✕</button>
+    <div id="dashboardModalContent"></div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    loadDashboard();
+    updateDashboard();
+});
+</script>
+</body>
+</html>
+
+

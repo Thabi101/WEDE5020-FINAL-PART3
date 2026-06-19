@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Services at GradLink Hub: internship placement, skill development, mentorship, and career guidance for graduates.">
+  <meta name="keywords" content="graduate services, internship placement, mentorship network, career guidance, skills training, South Africa">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Services — GradLink Hub">
+  <meta property="og:description" content="Discover GradLink Hub services that help graduates build skills, find internships, and launch careers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/services.html">
+  <meta property="og:image" content="https://source.unsplash.com/featured/?services,career">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services — GradLink Hub">
+  <meta name="twitter:description" content="Discover GradLink Hub services that help graduates build skills, find internships, and launch careers.">
+  <meta name="twitter:image" content="https://source.unsplash.com/featured/?services,career">
+  <title>Services — GradLink Hub</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-brand">
+      <img src="images/logo.svg" alt="GradLink Hub logo" class="logo-image" title="GradLink Hub logo">
+      <h2 class="logo-link">GradLink</h2>
+    </div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="skills.html">Skills</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="auth.html">Login</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+    </div>
+  </nav>
+  <button class="back-button" onclick="goBack()">← Back</button>
+
+  <div class="page-description">
+    <p>Explore our comprehensive services designed to help you discover opportunities and accelerate your career journey.</p>
+  </div>
+
+  <section class="services-hero">
+    <div class="hero-text">
+      <h1>Discover Our Services</h1>
+      <p class="hero-subtitle">Comprehensive tools and resources designed to accelerate your professional journey</p>
+    </div>
+    <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Services" class="services-hero-image">
+  </section>
+
+  <section class="services-grid">
+    <div class="service-card">
+      <h2>Internship Placement</h2>
+      <p>Direct connections to South Africa's top entry-level roles, filtered by your field of study.</p>
+      <ul>
+        <li>Employer screening and verified listings</li>
+        <li>Internship matching for final-year students</li>
+        <li>Personalized placement support</li>
+      </ul>
+      <button class="btn btn-secondary" onclick="showServiceDetails('internship')">Learn More →</button>
+    </div>
+
+    <div class="service-card">
+      <h2>Skill Development</h2>
+      <p>Industry-aligned modules and courses designed to bridge the gap between theory and practice.</p>
+      <ul>
+        <li>Expert-led training programs</li>
+        <li>Hands-on project work</li>
+        <li>Career-ready certification paths</li>
+      </ul>
+      <button class="btn btn-secondary" onclick="showServiceDetails('skill-development')">Learn More →</button>
+    </div>
+
+    <div class="service-card">
+      <h2>Mentorship Network</h2>
+      <p>One-on-one sessions with industry veterans who provide real-world insights and guidance.</p>
+      <ul>
+        <li>Mentor matching by career goal</li>
+        <li>Live coaching sessions</li>
+        <li>Network-building support</li>
+      </ul>
+      <button class="btn btn-secondary" onclick="showServiceDetails('mentorship')">Learn More →</button>
+    </div>
+
+    <div class="service-card">
+      <h2>Career Guidance</h2>
+      <p>Advanced personality and aptitude testing to find the career path that truly fits you.</p>
+      <ul>
+        <li>Career path analysis and planning</li>
+        <li>Interview preparation guidance</li>
+        <li>Resume and portfolio support</li>
+      </ul>
+      <button class="btn btn-secondary" onclick="showServiceDetails('career-guidance')">Learn More →</button>
+    </div>
+  </section>
+
+  <div id="serviceDetailsModal" class="modal-details">
+    <div class="modal-details-content">
+      <button class="modal-details-close" onclick="closeServiceDetails()">✕</button>
+      <div id="serviceDetailsContent"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
